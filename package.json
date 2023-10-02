@@ -1,0 +1,24 @@
+{
+  "name": "vue-microfrontend-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "nanoid": "^5.0.1",
+    "vue": "^3.3.4"
+  },
+  "scripts": {
+    "build": "yarn run build:old && yarn run build:new",
+    "build:old": "yarn run vite build -c old/vite.config.js",
+    "build:new": "yarn run webpack -c new/webpack.config.cjs --mode=development"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9",
+    "vue-loader": "^17.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
