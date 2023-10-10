@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span> main app </span>
+    <hr />
+    <span> imported app </span>
+    <div id="main"></div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+      const componentUrl = "http://localhost:8080/vendor/FancyButton.mjs";
+      const SubAppComponent = Vue.defineAsyncComponent(() => import(componentUrl));
+      const SubApp = Vue.createApp(SubAppComponent);
+      SubApp.mount(`#main`);
+    </script>
+  </body>
+</html>

@@ -10,7 +10,7 @@
     "vue": "^3.3.4"
   },
   "scripts": {
-    "build": "yarn run build:old && yarn run build:new",
+    "build": "yarn run build:new",
     "build:old": "yarn run vite build -c old/vite.config.js",
     "build:new": "yarn run webpack -c new/webpack.config.cjs --mode=development"
   },

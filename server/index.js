@@ -7,6 +7,6 @@ const app = express();
 app.use(cors());
 
 app.use("/vendor", express.static(resolve(__dirname, "../new/out")));
-app.use("/", express.static(resolve(__dirname, "../old/dist")));
+app.use("/", express.static(resolve(__dirname, "../old-plain")));
 
 app.listen(8080);
